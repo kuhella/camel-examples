@@ -16,9 +16,11 @@
  */
 package org.apache.camel.example.basic;
 
+import io.arenadata.AnsibleComponent;
 import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
+
 
 /**
  * A basic example running as public static void main.
@@ -31,11 +33,15 @@ public final class CamelBasic {
 
             // add routes which can be inlined as anonymous inner class
             // (to keep all code in a single java file for this basic example)
+
+            camel.addComponent("ansible", new AnsibleComponent(camel));
+
             camel.addRoutes(new RouteBuilder() {
                 @Override
                 public void configure() {
                     from("timer:foo")
-                            .log("Hello Camel");
+                            .log("Hello Camel")
+                            .to("ansible:///Users/ekurginyan/Documents/arenadata/adcm_cluster_ads/ansible/cluster_host_prepare_etc.yaml?tags=install");
                 }
             });
 

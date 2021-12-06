@@ -169,7 +169,12 @@
         <module>widget-gadget-cdi</module>
         <module>widget-gadget-java</module>
         <module>widget-gadget-xml</module>
-  </modules>
+        <module>ansible-endpoint</module>
+        <module>my-example</module>
+        <module>ansible</module>
+        <module>ansible</module>
+        <module>ansible-2</module>
+    </modules>
 
     <properties>
         <!-- unify the encoding for all the modules -->

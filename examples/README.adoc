@@ -11,11 +11,15 @@ View the individual example READMEs for details.
 == Examples
 
 // examples: START
-Number of Examples: 97 (0 deprecated)
+Number of Examples: 99 (0 deprecated)
 
 [width="100%",cols="4,2,4",options="header"]
 |===
 | Example | Category | Description
+
+| link:ansible-endpoint/readme.md[Ansible Endpoint] (ansible-endpoint) |  | 
+
+| link:my-example/readme.md[My Example] (my-example) |  | 
 
 | link:micrometer/README.adoc[Micrometer] (micrometer) | Advanced | An example showing how to work with Camel, Spring Java Config and Micrometer monitoring
 
